@@ -6,6 +6,7 @@
 ## Features
 - **Add New Product:** Allows users to add new products to the inventory.
 - **Update Product:** Enables users to update existing product information.
+- **Delete Product:** Removes a product from the inventory by name.
 - **Search Product:** Lets users search for a specific product by name.
 - **Display Products:** Displays all products in the inventory.
 - **User-Friendly Interface:** Uses console colors for better user experience.
