@@ -43,27 +43,6 @@ namespace InventoryManagementSys
             Console.ResetColor();
         }
 
-        public static void DisplayProducts()
-        {
-            if (indx == 0)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("\nNo Products Found!\n");
-                Console.ResetColor();
-                return;
-            }
-
-            for (int i = 0; i < indx; i++)
-            {
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine($"Product ID: {InventoryProducts[i].id}");
-                Console.WriteLine($"Name: {InventoryProducts[i].name}");
-                Console.WriteLine($"Price: {InventoryProducts[i].price}");
-                Console.WriteLine($"Quantity: {InventoryProducts[i].quantity}\n");
-            }
-            Console.ResetColor();
-        }
-
         public static void UpdateProduct()
         {
             if (indx == 0)
@@ -113,6 +92,75 @@ namespace InventoryManagementSys
             Console.ResetColor();
         }
 
+
+        public static void DeleteProduct()
+        {
+            if (indx == 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("List is empty!");
+                Console.ResetColor();
+                return;
+            }
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("Product name you want to remove: ");
+            string product_name = Console.ReadLine();
+            Console.ResetColor();
+
+            int found = -1;
+            for (int i = 0; i < indx; i++)
+            {
+                if (InventoryProducts[i].name.ToUpper() == product_name.ToUpper())
+                {
+                    found = i;
+                    break;
+                }
+            }
+
+            if (found == -1)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Product not found!");
+                Console.ResetColor();
+            }
+            else
+            {
+                for (int i = found; i < indx - 1; i++)
+                {
+                    InventoryProducts[i] = InventoryProducts[i + 1];
+                }
+
+                InventoryProducts[indx - 1] = default(Product); // Clear the last item
+                indx--;
+
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Product Deleted!");
+                Console.ResetColor();
+            }
+        }
+
+        public static void DisplayProducts()
+        {
+            if (indx == 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("\nNo Products Found!\n");
+                Console.ResetColor();
+                return;
+            }
+
+            for (int i = 0; i < indx; i++)
+            {
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine($"Product ID: {InventoryProducts[i].id}");
+                Console.WriteLine($"Name: {InventoryProducts[i].name}");
+                Console.WriteLine($"Price: {InventoryProducts[i].price}");
+                Console.WriteLine($"Quantity: {InventoryProducts[i].quantity}\n");
+            }
+            Console.ResetColor();
+        }
+
         public static void SearchForProduct()
         {
             if (indx == 0)
@@ -150,6 +198,7 @@ namespace InventoryManagementSys
                 Console.WriteLine($"Product Quantity: {InventoryProducts[foundIndx].quantity}");
                 Console.ResetColor();
             }
+            Console.WriteLine(); 
         }
 
         static void Main(string[] args)
@@ -184,7 +233,7 @@ namespace InventoryManagementSys
                         UpdateProduct();
                         break;
                     case 3:
-                        // delete product
+                        DeleteProduct(); 
                         break;
                     case 4:
                         SearchForProduct();
