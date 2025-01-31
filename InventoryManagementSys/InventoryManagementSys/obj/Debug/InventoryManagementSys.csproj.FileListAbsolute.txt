@@ -1,0 +1,7 @@
+C:\Users\Mohamed Maher\Desktop\ProjectHub\StockControl-CSharp\InventoryManagementSys\InventoryManagementSys\bin\Debug\InventoryManagementSys.exe.config
+C:\Users\Mohamed Maher\Desktop\ProjectHub\StockControl-CSharp\InventoryManagementSys\InventoryManagementSys\bin\Debug\InventoryManagementSys.exe
+C:\Users\Mohamed Maher\Desktop\ProjectHub\StockControl-CSharp\InventoryManagementSys\InventoryManagementSys\bin\Debug\InventoryManagementSys.pdb
+C:\Users\Mohamed Maher\Desktop\ProjectHub\StockControl-CSharp\InventoryManagementSys\InventoryManagementSys\obj\Debug\InventoryManagementSys.csproj.AssemblyReference.cache
+C:\Users\Mohamed Maher\Desktop\ProjectHub\StockControl-CSharp\InventoryManagementSys\InventoryManagementSys\obj\Debug\InventoryManagementSys.csproj.CoreCompileInputs.cache
+C:\Users\Mohamed Maher\Desktop\ProjectHub\StockControl-CSharp\InventoryManagementSys\InventoryManagementSys\obj\Debug\InventoryManagementSys.exe
+C:\Users\Mohamed Maher\Desktop\ProjectHub\StockControl-CSharp\InventoryManagementSys\InventoryManagementSys\obj\Debug\InventoryManagementSys.pdb
